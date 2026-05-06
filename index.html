@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <body style="margin:0;">
-    <iframe 
-      src="Spring 2026 EOS Program.pdf" 
-      style="width:100%; height:100vh; border:none;">
-    </iframe>
-  </body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { margin: 0; }
+    iframe { width: 100%; height: 100vh; border: none; }
+    .mobile-link {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="mobile-link">
+  <a href="Spring 2026 EOS Program.pdf">Open Program</a>
+</div>
+
+<iframe src="Spring 2026 EOS Program.pdf"></iframe>
+
+<script>
+  if (window.innerWidth < 768) {
+    document.querySelector("iframe").style.display = "none";
+    document.querySelector(".mobile-link").style.display = "block";
+  }
+</script>
+
+</body>
 </html>
